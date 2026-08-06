@@ -6,7 +6,7 @@ import hero4 from "../assets/hero4.jpg";
 
 const heroImages = [hero1, hero2, hero3, hero4];
 
-export function Hero() {
+export function HeroPage() {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="hero-page relative w-full h-screen overflow-hidden">
       {heroImages.map((src, index) => (
         <img
           key={index}
@@ -32,8 +32,8 @@ export function Hero() {
 
       <div className="absolute inset-0 bg-linear-to-r from-stone-900/90 via-stone-900/50 to-transparent" />
 
-      <div className="relative z-10 flex flex-col justify-center h-full max-w-2xl px-16 text-stone-50">
-        <q className="text-24xl md:text-5xl leading-tight italic">
+      <div className="relative z-10 flex flex-col justify-center h-full max-w-4xl px-16 text-stone-50 mt-24">
+        <q className="text-24xl md:text-5xl leading-tight italic font-bold">
           Quien sabe degustar no bebe jamás el vino, sino que degusta sus
           secretos
         </q>

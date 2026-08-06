@@ -4,8 +4,8 @@ export function Header() {
   const [lang, setLang] = useState("es");
 
   return (
-    <div className="header flex items-center bg-stone-700 p-5 justify-between">
-      <div className="header-log ml-32 mr-8">
+    <div className="header flex items-center bg-stone-700 p-5 justify-between fixed top-0 left-0 w-full z-50 ">
+      <div className="header-logo ml-32 mr-8">
         <a href="/">
           <img src="./Logo.svg" alt="Logo" />
         </a>
