@@ -30,7 +30,7 @@ export function Header() {
       <div className="language-toggle-button mr-24">
         <button
           onClick={() => setLang(lang === "es" ? "en" : "es")}
-          className="relative w-[90px] h-9 rounded-full bg-transparent border-2 border-taupe-50 p-1"
+          className="relative w-22.5 h-9 rounded-full bg-transparent border-2 border-taupe-50 p-1"
         >
           <span
             className={`absolute left-0 top-0 h-full w-12 rounded-full bg-taupe-50 flex items-center justify-center text-xl font-semibold text-stone-700 transition-transform duration-300 underline ${

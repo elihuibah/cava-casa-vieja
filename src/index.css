@@ -3,3 +3,12 @@
 body {
   font-family: "Crimson Text", sans-serif;
 }
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
