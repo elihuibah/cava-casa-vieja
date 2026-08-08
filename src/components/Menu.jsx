@@ -8,12 +8,14 @@ import { DrinkMenu2Left } from "./DrinkMenu2Left";
 import { DrinkMenu2Right } from "./DrinkMenu2Right";
 
 function CornerMarks() {
-  <>
-    <span className="absolute top-3 left-3 w-4 h-4 border-t border-l border-amber-800/50 pointer-events-none" />
-    <span className="absolute top-3 right-3 w-4 h-4 border-t border-r border-amber-800/50 pointer-events-none" />
-    <span className="absolute bottom-3 left-3 w-4 h-4 border-t border-l border-amber-800/50 pointer-events-none" />
-    <span className="absolute bottom-3 right-3 w-4 h-4 border-t border-r border-amber-800/50 pointer-events-none" />
-  </>;
+  return (
+    <>
+      <span className="absolute top-3 left-3 w-8 h-8 border-t-3 border-l-3 border-amber-800/50 pointer-events-none" />
+      <span className="absolute top-3 right-3 w-8 h-8 border-t-3 border-r-3 border-amber-800/50 pointer-events-none" />
+      <span className="absolute bottom-3 left-3 w-8 h-8 border-b-3 border-l-3 border-amber-800/50 pointer-events-none" />
+      <span className="absolute bottom-3 right-3 w-8 h-8 border-b-3 border-r-3 border-amber-800/50 pointer-events-none" />
+    </>
+  );
 }
 
 const Page = forwardRef(({ children, divider }, ref) => {
@@ -28,16 +30,18 @@ const Page = forwardRef(({ children, divider }, ref) => {
   );
 });
 
-export function Menu({ bookRef }) {
+export function Menu({ bookRef, onPageChange }) {
   const containerRef = useRef(null);
-  const [pageSize, setPageSize] = useState({ width: 450, height: 650 });
+  const [pageSize, setPageSize] = useState({ width: 450, height: 625 });
+  const [currentPage, setCurrentPage] = useState(0);
+  const totalPages = 6;
 
   useEffect(() => {
     const updateSize = () => {
       if (!containerRef.current) return;
       const totalWidth = Math.min(containerRef.current.offsetWidth, 1300);
       const singlePageWidth = totalWidth / 2;
-      const height = singlePageWidth / 1.55;
+      const height = singlePageWidth * 1.5;
       setPageSize({ width: singlePageWidth, height });
     };
 
@@ -46,13 +50,26 @@ export function Menu({ bookRef }) {
     return () => window.removeEventListener("resize", updateSize);
   }, []);
 
+  const handleFlip = (e) => {
+    setCurrentPage(e.data);
+    onPageChange?.(e.data);
+  };
+
+  const canGoBack = currentPage > 0;
+  const canGoForward = currentPage < totalPages - 2;
+  const goPrev = () => bookRef.current?.pageFlip()?.flipPrev();
+  const goNext = () => bookRef.current?.pageFlip()?.flipNext();
+
   return (
-    <div ref={containerRef} className="w-full">
+    <div ref={containerRef} className="relative w-full">
       <HTMLFlipBook
         width={pageSize.width}
         height={pageSize.height}
         showCover={false}
+        usePortrait={false}
         mobileScrollSupport={true}
+        flippingTime={450}
+        onFlip={handleFlip}
         className="mx-auto"
         ref={bookRef}
       >
@@ -75,6 +92,25 @@ export function Menu({ bookRef }) {
           <DrinkMenu2Right />
         </Page>
       </HTMLFlipBook>
+
+      <button
+        onClick={goPrev}
+        aria-label="Página anterior"
+        className={`absolute top-1/2 -translate-y-1/2 -left-4 md:-left-20 text-8xl font-serif font-light text-stone-100/80 hover:text-stone-50 transition-opacity duration-300 ease-in-out ${canGoBack ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+      >
+        ‹
+      </button>
+      <button
+        onClick={goNext}
+        aria-label="Página siguiente"
+        className={`absolute top-1/2 -translate-y-1/2 -right-4 md:-right-20 text-8xl font-serif font-light text-stone-100/80 hover:text-stone-50 transition-opacity duration-300 ease-in-out ${canGoForward ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+      >
+        ›
+      </button>
+      <div className="text-stone-100 italic relative z-10 text-left mt-10">
+        <p>*Precios sujetos a cambios</p>
+        <p>**Precios desglosados en moneda mexicana (MXN) y con IVA incluido</p>
+      </div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ export function MenuItem({ name, description, price }) {
     <div className="flex justify-between items-baseline gap-4">
       <span className="whitespace-nowrap">{name}</span>
       {description && (
-        <span className="text-sm italic text-stone-600 text-right flex-1">
+        <span className="italic text-stone-600 text-right flex-1">
           {description}
         </span>
       )}

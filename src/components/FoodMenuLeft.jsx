@@ -7,10 +7,10 @@ export function FoodMenuLeft() {
         src="/famicons_pizza-sharp.svg"
         className="block mx-auto w-10 h-10 mb-2"
       />
-      <h3 className="text-center font-serif text-2xl font-bold tracking-wide mb-1">
+      <h3 className="text-center font-serif text-xl font-bold tracking-wide mb-1">
         ◇ PIZZAS ◇
       </h3>
-      <p className="text-center font-semibold mb-8">Cada una a $255</p>
+      <h4 className="text-center font-bold mb-4">Cada una a $255</h4>
       <div className="space-y-5">
         <MenuItem name="Pepperoni" />
         <MenuItem
@@ -33,12 +33,12 @@ export function FoodMenuLeft() {
         />
       </div>
 
-      <img src="/mdi_bread.svg" className="block mx-auto w-10 h-10 mb-2" />
-      <h3 className="text-center font-serif text-2xl font-bold tracking-wide mb-1">
+      <img src="/mdi_bread.svg" className="block mx-auto w-10 h-10 mb-2 mt-3" />
+      <h3 className="text-center font-serif text-xl font-bold tracking-wide mb-1">
         ◇ PAN ASADO ◇
       </h3>
-      <p className="text-center font-semibold mb-4">$280</p>
-      <p className="text-center text-sm leading-relaxed">
+      <p className="text-center font-semibold mb-2">$280</p>
+      <p className="text-center leading-relaxed">
         Pan artesanal humectado en aceite de oliva y<br />
         especias. Relleno de queso con trozos de tocinos
       </p>
