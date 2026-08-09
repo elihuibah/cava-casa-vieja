@@ -1,87 +1,114 @@
+import { RevealEffect } from "../components/RevealEffect";
+
 export function AboutUsPage() {
   return (
-    <section className="relative py-32 px-8 md:px-16 bg-linear-to-r from-stone-50 via-stone-100 to-stone-300 overflow-hidden">
+    <section
+      id="nosotros"
+      className="scroll-mt-24 relative py-32 px-8 md:px-16 bg-linear-to-r from-stone-50 via-stone-100 to-stone-300 overflow-hidden"
+    >
       <div
         className="absolute inset-0 bg-no-repeat bg-right opacity-10 pointer-events-none"
-        style={{ backgroundImage: "url('/origenes-laus.jpg')" }}
+        style={{ backgroundImage: "url('/origenes-laus.png')" }}
       />
 
       <div className="columns relative grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
         <div className="collage relative w-full max-w-md mx-auto aspect-4/5">
-          <div className="brown-border absolute top-8 left-8 right-12 -bottom-8 border-3 border-amber-800/40 z-0" />
-          <div className="gray-square absolute top-2 right-34 w-24 h-24 bg-neutral-500 z-0" />
-          <img
-            src="/DSC01279.JPG"
-            alt="Letrero de 'La Cava'"
-            className="absolute top-14 left-0 w-3/5 aspect-4/5 object-cover shadow-xl/25 z-20"
+          <RevealEffect
+            delay={0}
+            className="brown-border absolute top-8 left-8 right-12 -bottom-8 border-3 border-amber-800/40 z-0"
           />
-          <img
-            src="/475122804_2687146191495051_646480903382055388_n.jpg"
-            alt="Botella de vino 'Don Enrique'"
-            className="absolute -bottom-14 right-0 w-3/5 aspect-4/5 object-cover shadow-xl/25 z-30"
+          <RevealEffect
+            delay={150}
+            className="gray-square absolute top-2 right-34 w-24 h-24 bg-neutral-500 z-0"
           />
-          <svg
-            className="absolute -bottom-2 -left-2 w-38 h-38 text-neutral-500 z-0"
-            viewBox="0 0 100 100"
-            fill="none"
+          <RevealEffect
+            delay={300}
+            className="absolute top-14 left-0 w-3/5 aspect-4/5 z-20"
           >
-            <circle
-              cx="50"
-              cy="50"
-              r="45"
-              stroke="currentColor"
-              strokeWidth="0.5"
+            <img
+              src="/DSC01279.JPG"
+              alt="Letrero de 'La Cava'"
+              className="w-full h-full object-cover shadow-xl/25"
             />
-            <circle
-              cx="50"
-              cy="50"
-              r="40"
-              stroke="currentColor"
-              strokeWidth="0.5"
+          </RevealEffect>
+
+          <RevealEffect
+            delay={450}
+            className="absolute -bottom-14 right-0 w-3/5 aspect-4/5 z-30"
+          >
+            <img
+              src="/475122804_2687146191495051_646480903382055388_n.jpg"
+              alt="Botella de vino 'Don Enrique'"
+              className="w-full h-full object-cover shadow-xl/25"
             />
-            <circle
-              cx="50"
-              cy="50"
-              r="35"
-              stroke="currentColor"
-              strokeWidth="0.5"
-            />
-            <circle
-              cx="50"
-              cy="50"
-              r="30"
-              stroke="currentColor"
-              strokeWidth="0.5"
-            />
-            <circle
-              cx="50"
-              cy="50"
-              r="25"
-              stroke="currentColor"
-              strokeWidth="0.5"
-            />
-            <circle
-              cx="50"
-              cy="50"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="0.5"
-            />
-            <circle
-              cx="50"
-              cy="50"
-              r="15"
-              stroke="currentColor"
-              strokeWidth="0.5"
-            />
-            <circle
-              cx="50"
-              cy="50"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="0.5"
-            />
-          </svg>
+          </RevealEffect>
+          <RevealEffect
+            delay={600}
+            className="absolute -bottom-2 -left-2 w-38 h-38 z-0"
+          >
+            <svg
+              className="w-full h-full text-neutral-500"
+              viewBox="0 0 100 100"
+              fill="none"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+              <circle
+                cx="50"
+                cy="50"
+                r="35"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+              <circle
+                cx="50"
+                cy="50"
+                r="30"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+              <circle
+                cx="50"
+                cy="50"
+                r="25"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+              <circle
+                cx="50"
+                cy="50"
+                r="20"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+              <circle
+                cx="50"
+                cy="50"
+                r="15"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+              <circle
+                cx="50"
+                cy="50"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+            </svg>
+          </RevealEffect>
         </div>
 
         <div className="text-column">

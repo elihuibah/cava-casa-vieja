@@ -1,3 +1,4 @@
+import { RevealEffect } from "../components/RevealEffect";
 import reservationsbackground from "../assets/reservations-background.jpg";
 
 function CornerMarks() {
@@ -14,7 +15,8 @@ function CornerMarks() {
 export function ReservationsPage() {
   return (
     <section
-      className="relative py-24 px-8 bg-cover bg-center text-stone-900"
+      id="reservaciones"
+      className="scroll-mt-24 relative py-24 px-8 bg-cover bg-center text-stone-900"
       style={{ backgroundImage: `url(${reservationsbackground})` }}
     >
       <div className="absolute inset-0 bg-stone-50/70" />
@@ -23,7 +25,7 @@ export function ReservationsPage() {
         <div className="w-full h-0.5 bg-stone-900 mb-12" />
 
         <div className="grid md:grid-cols-2 gap-10">
-          <div className="relative bg-stone-200 p-10">
+          <RevealEffect delay={0} className="relative bg-stone-200 p-10">
             <CornerMarks />
             <h3 className="font-serif text-center font-bold text-3xl mb-4">
               HORARIO
@@ -44,9 +46,9 @@ export function ReservationsPage() {
                 </p>
               </div>
             </div>
-          </div>
+          </RevealEffect>
 
-          <div className="relative bg-stone-200 p-10">
+          <RevealEffect delay={200} className="relative bg-stone-200 p-10">
             <CornerMarks />
             <h3 className="font-serif font-bold text-3xl text-center mb-4">
               CONTACTO
@@ -66,7 +68,7 @@ export function ReservationsPage() {
                 cavacasavieja@hotmail.com
               </p>
             </div>
-          </div>
+          </RevealEffect>
         </div>
 
         <div className="w-full h-0.5 bg-stone-900 mt-12" />

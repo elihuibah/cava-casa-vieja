@@ -4,7 +4,8 @@ import locationbackground from "../assets/location-background.jpg";
 export function LocationPage() {
   return (
     <section
-      className="relative py-16 px-8 bg-cover bg-center"
+      id="ubicacion"
+      className="scroll-mt-24 relative py-16 px-8 bg-cover bg-center"
       style={{ backgroundImage: `url(${locationbackground})` }}
     >
       <div className="absolute inset-0 bg-olive-600/70" />

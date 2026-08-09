@@ -15,7 +15,8 @@ export function MenuPage() {
 
   return (
     <section
-      className="relative py-24 px-8 bg-cover bg-center"
+      id="menu"
+      className="scroll-mt-24 relative py-24 px-8 bg-cover bg-center"
       style={{ backgroundImage: `url(${menubackground})` }}
     >
       <div className="absolute inset-0 bg-stone-900/70" />
