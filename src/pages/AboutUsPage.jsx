@@ -90,7 +90,7 @@ export function AboutUsPage() {
             <br />
             RUTA DEL VINO
           </h2>
-          <p className="text-stone-700 leading-relaxed text-xl">
+          <p className="text-stone-900 leading-relaxed text-xl">
             <span className="float-left mr-3 mt-1 flex items-center justify-center w-10 h-10 bg-taupe-200 text-3xl font-serif font-bold text-stone-800 shadow-[-4px_4px_0_0_#78716c]">
               F
             </span>
@@ -106,7 +106,7 @@ export function AboutUsPage() {
             <div className="flex-1 h-px bg-stone-400" />
           </div>
 
-          <p className="text-stone-700 leading-relaxed text-xl">
+          <p className="text-stone-900 leading-relaxed text-xl">
             <span className="float-left mr-3 mt-1 flex items-center justify-center w-10 h-10 bg-taupe-200 text-3xl font-serif font-bold text-stone-800 shadow-[-4px_4px_0_0_#78716c]">
               C
             </span>
