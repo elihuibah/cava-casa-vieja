@@ -3,15 +3,12 @@ import { MenuItem } from "./MenuItem";
 export function FoodMenuLeft() {
   return (
     <div>
-      <img
-        src="/famicons_pizza-sharp.svg"
-        className="block mx-auto w-10 h-10 mb-2"
-      />
-      <h3 className="text-center font-serif text-xl font-bold tracking-wide mb-1">
+      <img src="/famicons_pizza-sharp.svg" className="block mx-auto w-8 h-8" />
+      <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         ◇ PIZZAS ◇
       </h3>
-      <h4 className="text-center font-bold mb-4">Cada una a $255</h4>
-      <div className="space-y-5">
+      <h4 className="text-center font-bold mb-2">Cada una a $255</h4>
+      <div className="space-y-4">
         <MenuItem name="Pepperoni" />
         <MenuItem
           name="Ranchera"
@@ -33,8 +30,8 @@ export function FoodMenuLeft() {
         />
       </div>
 
-      <img src="/mdi_bread.svg" className="block mx-auto w-10 h-10 mb-2 mt-3" />
-      <h3 className="text-center font-serif text-xl font-bold tracking-wide mb-1">
+      <img src="/mdi_bread.svg" className="block mx-auto w-8 h-8 mt-4" />
+      <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         ◇ PAN ASADO ◇
       </h3>
       <p className="text-center font-semibold mb-2">$280</p>

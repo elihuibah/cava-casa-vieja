@@ -36,18 +36,14 @@ export function HeroPage() {
 
       <div className="absolute inset-0 bg-linear-to-r from-stone-900/90 via-stone-900/50 to-transparent" />
 
-      <div className="relative z-10 h-full max-w-6xl px-8 text-stone-50 mx-auto md:px-16 grid md:grid-cols-2 items-center gap-8">
-        <q className="text-4xl md:text-7xl leading-tight italic font-bold block">
-          Quien sabe degustar no bebe jamás el vino, sino que degusta sus
-          secretos
-        </q>
-        <p className="mt-6 text-4xl italic">- Salvador Dalí</p>
-        <a
-          href="#reservaciones"
-          className="mt-10 w-fit px-8 py-3 border-2 border-stone-50 bg-stone-800 rounded-full font-semibold tracking-wide hover:bg-stone-50 hover:text-stone-900 transition"
-        >
-          RESERVA AHORA
-        </a>
+      <div className="relative z-10 h-full max-w-6xl px-8 text-stone-50 mx-auto md:px-16 grid md:grid-cols-2 items-center">
+        <div className="-ml-24">
+          <q className="text-3xl md:text-6xl leading-tight italic font-bold block mt-24">
+            Quien sabe degustar no bebe jamás el vino, sino que degusta sus
+            secretos
+          </q>
+          <p className="mt-6 text-4xl italic">- Salvador Dalí</p>
+        </div>
         <RevealEffect delay={300} className="hidden md:flex justify-center">
           <img
             src={wine}
@@ -55,6 +51,12 @@ export function HeroPage() {
             className="max-h-[75vh] w-auto object-contain"
           />
         </RevealEffect>
+        <a
+          href="#reservaciones"
+          className="-ml-24 -mt-54 w-fit px-8 py-3 border-2 border-stone-50 bg-stone-800 rounded-full font-semibold tracking-wide hover:bg-stone-50 hover:text-stone-900 transition"
+        >
+          RESERVA AHORA
+        </a>
       </div>
     </section>
   );

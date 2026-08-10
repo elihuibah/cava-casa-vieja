@@ -22,7 +22,7 @@ const Page = forwardRef(({ children, divider }, ref) => {
   return (
     <div
       ref={ref}
-      className={`relative w-full h-full bg-stone-100 shadow-2xl p-8 md:p-10 overflow-y-auto ${divider === "right" ? "border-r border-stone-400" : ""}`}
+      className={`relative w-full h-full bg-stone-100 shadow-2xl p-6 md:p-8 overflow-y-auto text-base ${divider === "right" ? "border-r border-stone-400" : ""}`}
     >
       <CornerMarks />
       {children}
@@ -39,9 +39,9 @@ export function Menu({ bookRef, onPageChange }) {
   useEffect(() => {
     const updateSize = () => {
       if (!containerRef.current) return;
-      const totalWidth = Math.min(containerRef.current.offsetWidth, 1300);
+      const totalWidth = Math.min(containerRef.current.offsetWidth, 1200);
       const singlePageWidth = totalWidth / 2;
-      const height = singlePageWidth * 1.5;
+      const height = singlePageWidth * 1.1875;
       setPageSize({ width: singlePageWidth, height });
     };
 
@@ -96,18 +96,18 @@ export function Menu({ bookRef, onPageChange }) {
       <button
         onClick={goPrev}
         aria-label="Página anterior"
-        className={`absolute top-1/2 -translate-y-1/2 -left-4 md:-left-20 text-8xl font-serif font-light text-stone-100/80 hover:text-stone-50 transition-opacity duration-300 ease-in-out ${canGoBack ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        className={`cursor-pointer absolute top-1/2 -translate-y-3/4 -left-4 md:-left-20 w-16 flex justify-center text-8xl font-serif font-light text-stone-100/80 hover:text-stone-50 transition-opacity duration-300 ease-in-out ${canGoBack ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         ‹
       </button>
       <button
         onClick={goNext}
         aria-label="Página siguiente"
-        className={`absolute top-1/2 -translate-y-1/2 -right-4 md:-right-20 text-8xl font-serif font-light text-stone-100/80 hover:text-stone-50 transition-opacity duration-300 ease-in-out ${canGoForward ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        className={`cursor-pointer absolute top-1/2 -translate-y-3/4 -right-4 md:-right-20 w-16 flex justify-center text-8xl font-serif font-light text-stone-100/80 hover:text-stone-50 transition-opacity duration-300 ease-in-out ${canGoForward ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         ›
       </button>
-      <div className="text-stone-100 italic relative z-10 text-left mt-10">
+      <div className="text-stone-100 italic relative z-10 text-left mt-6">
         <p>*Precios sujetos a cambios</p>
         <p>**Precios desglosados en moneda mexicana (MXN) y con IVA incluido</p>
       </div>

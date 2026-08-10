@@ -16,25 +16,25 @@ export function MenuPage() {
   return (
     <section
       id="menu"
-      className="scroll-mt-24 relative py-24 px-8 bg-cover bg-center"
+      className="scroll-mt-24 relative py-12 px-8 bg-cover bg-center"
       style={{ backgroundImage: `url(${menubackground})` }}
     >
       <div className="absolute inset-0 bg-stone-900/70" />
       <div className="relative z-10 max-w-5xl mx-auto text-center">
-        <h2 className="font-serif text-5xl font-bold text-stone-100 mb-6">
+        <h2 className="font-serif text-4xl font-bold text-stone-100 mb-3">
           MENÚ
         </h2>
-        <div className="flex items-center justify-center gap-6 mb-10">
+        <div className="flex items-center justify-center gap-6 mb-8">
           <button
             onClick={() => goToPage(0)}
-            className={`font-serif text-xl font-semibold text-stone-50 hover:text-stone-300 transition ${isFoodMenuActive ? "text-stone-50 underline underline-offset-4" : "text-stone-400"}`}
+            className={`cursor-pointer font-serif text-xl font-semibold text-stone-50 hover:text-stone-300 transition ${isFoodMenuActive ? "text-stone-50 underline underline-offset-4" : "text-stone-400"}`}
           >
             Comida
           </button>
           <div className="w-px h-6 bg-stone-50/50" />
           <button
             onClick={() => goToPage(2)}
-            className={`font-serif text-xl font-semibold text-stone-50 hover:text-stone-300 transition ${isDrinksMenuActive ? "text-stone-50 underline underline-offset-4" : "text-stone-400"}`}
+            className={`cursor-pointer font-serif text-xl font-semibold text-stone-50 hover:text-stone-300 transition ${isDrinksMenuActive ? "text-stone-50 underline underline-offset-4" : "text-stone-400"}`}
           >
             Bebidas
           </button>

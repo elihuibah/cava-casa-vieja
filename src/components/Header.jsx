@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const sections = [
   { id: "nosotros", label: "Nosotros" },
@@ -24,6 +24,26 @@ function NavLink({ id, label, isActive }) {
 export function Header() {
   const [lang, setLang] = useState("es");
   const [activeSection, setActiveSection] = useState("nosotros");
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 80) {
+        setHidden(false);
+      } else if (currentScrollY > lastScrollY.current) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,7 +66,9 @@ export function Header() {
   }, []);
 
   return (
-    <div className="header flex items-center bg-stone-800 py-5 px-8 md:px-16 fixed top-0 left-0 w-full z-50 ">
+    <div
+      className={`header flex items-center bg-stone-800 py-5 px-8 md:px-16 fixed top-0 left-0 w-full z-50 transition-transform duration-500 ease-in-out ${hidden ? "-translate-y-full" : "translate-y-0"}`}
+    >
       <div className="header-logo mr-8">
         <a href="# ">
           <img src="./Logo.svg" alt="Logo" className="ml-24" />

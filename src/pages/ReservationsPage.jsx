@@ -54,19 +54,72 @@ export function ReservationsPage() {
               CONTACTO
             </h3>
             <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-5 items-center text-left">
-              <img src="/basil_whatsapp-solid.svg" className="w-12 h-12" />
-              <p className="text-stone-900 text-2xl">665 113 7613</p>
-              <img src="/mdi_facebook.svg" className="w-12 h-12" />
-              <p className="text-stone-900 text-2xl">Cava Casa Vieja</p>
-              <img src="/formkit_instagram.svg" className="w-12 h-12" />
-              <p className="text-stone-900 text-2xl">Cava Casa Vieja</p>
-              <img
-                src="/material-symbols-light_mail-sharp.svg"
-                className="w-12 h-12"
-              />
-              <p className="text-stone-900 text-2xl">
-                cavacasavieja@hotmail.com
-              </p>
+              <a
+                href="https://wa.me/526651137613?text=Hola,%20quisiera%20reservar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:opacity-70 transition"
+              >
+                <img src="/basil_whatsapp-solid.svg" className="w-12 h-12" />
+              </a>
+              <a
+                href="https://wa.me/526651137613?text=Hola,%20quisiera%20reservar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:opacity-70 transition"
+              >
+                <p className="text-stone-900 text-2xl">665 113 7613</p>
+              </a>
+              <a
+                href="https://wa.me/cavacasavieja"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:opacity-70 transition"
+              >
+                <img src="/mdi_facebook.svg" className="w-12 h-12" />
+              </a>
+              <a
+                href="https://m.me/cavacasavieja"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:opacity-70 transition"
+              >
+                <p className="text-stone-900 text-2xl">Cava Casa Vieja</p>
+              </a>
+
+              <a
+                href="https://ig.me/m/cavacasavieja/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:opacity-70 transition"
+              >
+                <img src="/formkit_instagram.svg" className="w-12 h-12" />
+              </a>
+              <a
+                href="https://ig.me/m/cavacasavieja/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:opacity-70 transition"
+              >
+                <p className="text-stone-900 text-2xl">Cava Casa Vieja</p>
+              </a>
+              <a
+                href="mailto:cavacasavieja@hotmail.com"
+                className="flex items-center gap-4 hover:opacity-70 transition"
+              >
+                <img
+                  src="/material-symbols-light_mail-sharp.svg"
+                  className="w-12 h-12"
+                />
+              </a>
+              <a
+                href="mailto:cavacasavieja@hotmail.com"
+                className="flex items-center gap-4 hover:opacity-70 transition"
+              >
+                <p className="text-stone-900 text-2xl">
+                  cavacasavieja@hotmail.com
+                </p>
+              </a>
             </div>
           </RevealEffect>
         </div>
