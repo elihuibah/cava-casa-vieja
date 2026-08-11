@@ -95,14 +95,14 @@ export function Menu({ bookRef, onPageChange }) {
 
       <button
         onClick={goPrev}
-        aria-label="Página anterior"
+        aria-label="Página anterior del menú"
         className={`cursor-pointer absolute top-1/2 -translate-y-3/4 -left-4 md:-left-20 w-16 flex justify-center text-8xl font-serif font-light text-stone-100/80 hover:text-stone-50 transition-opacity duration-300 ease-in-out ${canGoBack ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         ‹
       </button>
       <button
         onClick={goNext}
-        aria-label="Página siguiente"
+        aria-label="Página siguiente del menú"
         className={`cursor-pointer absolute top-1/2 -translate-y-3/4 -right-4 md:-right-20 w-16 flex justify-center text-8xl font-serif font-light text-stone-100/80 hover:text-stone-50 transition-opacity duration-300 ease-in-out ${canGoForward ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         ›

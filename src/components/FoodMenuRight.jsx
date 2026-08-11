@@ -6,6 +6,7 @@ export function FoodMenuRight() {
       <img
         src="/fluent_bowl-salad-20-filled.svg"
         className="block mx-auto w-8 h-8"
+        alt="Ícono de ensalada"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         ◇ ENSALADAS ◇
@@ -21,6 +22,7 @@ export function FoodMenuRight() {
       <img
         src="/flowbite_cheese-solid.svg"
         className="block mx-auto w-8 h-8 mt-4"
+        alt="Ícono de queso"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         ◇ QUESO FUNDIDO ◇
@@ -33,7 +35,11 @@ export function FoodMenuRight() {
         Chorizo, rajas, champiñones. Con tortillas de harina, de maíz o pan.
       </p>
 
-      <img src="/meat.svg" className="block mx-auto w-8 h-8 mt-4" />
+      <img
+        src="/meat.svg"
+        className="block mx-auto w-8 h-8 mt-4"
+        alt="Ícono de carne"
+      />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         ◇ TABLAS DE QUESO Y CARNES ◇
       </h3>

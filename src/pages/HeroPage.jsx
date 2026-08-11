@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { RevealEffect } from "../components/RevealEffect";
+import { useLanguage } from "../context/useLanguage";
 import hero1 from "../assets/hero1.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpeg";
@@ -9,6 +10,7 @@ import wine from "../assets/wine-bottle.png";
 const heroImages = [hero1, hero2, hero3, hero4];
 
 export function HeroPage() {
+  const { t } = useLanguage();
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -21,7 +23,7 @@ export function HeroPage() {
 
   return (
     <section
-      id=" "
+      id="inicio"
       className="hero-page relative w-full h-screen overflow-hidden"
     >
       {heroImages.map((src, index) => (
@@ -39,15 +41,14 @@ export function HeroPage() {
       <div className="relative z-10 h-full max-w-6xl px-8 text-stone-50 mx-auto md:px-16 grid md:grid-cols-2 items-center">
         <div className="-ml-24">
           <q className="text-3xl md:text-6xl leading-tight italic font-bold block mt-24">
-            Quien sabe degustar no bebe jamás el vino, sino que degusta sus
-            secretos
+            {t("hero.quote")}
           </q>
-          <p className="mt-6 text-4xl italic">- Salvador Dalí</p>
+          <p className="mt-6 text-4xl italic">{t("hero.author")}</p>
         </div>
         <RevealEffect delay={300} className="hidden md:flex justify-center">
           <img
             src={wine}
-            alt="Botella y copa de vino de Cava Casa Vieja"
+            alt={t("hero.imageAlt")}
             className="max-h-[75vh] w-auto object-contain"
           />
         </RevealEffect>
@@ -55,7 +56,7 @@ export function HeroPage() {
           href="#reservaciones"
           className="-ml-24 -mt-54 w-fit px-8 py-3 border-2 border-stone-50 bg-stone-800 rounded-full font-semibold tracking-wide hover:bg-stone-50 hover:text-stone-900 transition"
         >
-          RESERVA AHORA
+          {t("hero.cta")}
         </a>
       </div>
     </section>

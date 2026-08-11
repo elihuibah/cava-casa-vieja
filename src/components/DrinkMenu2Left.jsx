@@ -3,7 +3,11 @@ import { MenuItem } from "./MenuItem";
 export function DrinkMenu2Left() {
   return (
     <div>
-      <img src="/ion_beer.svg" className="block mx-auto w-8 h-8" />
+      <img
+        src="/ion_beer.svg"
+        className="block mx-auto w-8 h-8"
+        alt="Ícono de cerveza"
+      />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         ◇ CERVEZAS ◇
       </h3>
@@ -42,7 +46,11 @@ export function DrinkMenu2Left() {
         </div>
       </div>
 
-      <img src="/icon-park-solid_cola.svg" className="block mx-auto w-8 h-8" />
+      <img
+        src="/icon-park-solid_cola.svg"
+        className="block mx-auto w-8 h-8"
+        alt="Ícono de refresco"
+      />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         ◇ SIN ALCOHOL ◇
       </h3>

@@ -3,7 +3,11 @@ import { MenuItem } from "./MenuItem";
 export function FoodMenuLeft() {
   return (
     <div>
-      <img src="/famicons_pizza-sharp.svg" className="block mx-auto w-8 h-8" />
+      <img
+        src="/famicons_pizza-sharp.svg"
+        className="block mx-auto w-8 h-8"
+        alt="Ícono de pizza"
+      />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         ◇ PIZZAS ◇
       </h3>
@@ -30,7 +34,11 @@ export function FoodMenuLeft() {
         />
       </div>
 
-      <img src="/mdi_bread.svg" className="block mx-auto w-8 h-8 mt-4" />
+      <img
+        src="/mdi_bread.svg"
+        className="block mx-auto w-8 h-8 mt-4"
+        alt="Ícono de pan asado"
+      />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         ◇ PAN ASADO ◇
       </h3>

@@ -1,6 +1,8 @@
+import { useLanguage } from "../context/useLanguage";
 import { RevealEffect } from "../components/RevealEffect";
 
 export function AboutUsPage() {
+  const { t } = useLanguage();
   return (
     <section
       id="nosotros"
@@ -38,7 +40,7 @@ export function AboutUsPage() {
           >
             <img
               src="/475122804_2687146191495051_646480903382055388_n.jpg"
-              alt="Botella de vino 'Don Enrique'"
+              alt="Racimo de uvas junto con una copa y una botella de vino 'Don Enrique'"
               className="w-full h-full object-cover shadow-xl/25"
             />
           </RevealEffect>
@@ -113,18 +115,15 @@ export function AboutUsPage() {
 
         <div className="text-column">
           <h2 className="font-serif text-xl md:text-4xl font-bold text-stone-800 leading-tight mb-10 text-center">
-            AQUÍ COMIENZA LA VIEJA
+            {t("about.title1")}
             <br />
-            RUTA DEL VINO
+            {t("about.title2")}
           </h2>
           <p className="text-stone-900 leading-relaxed text-xl">
             <span className="float-left mr-3 mt-1 flex items-center justify-center w-10 h-10 bg-taupe-200 text-3xl font-serif font-bold text-stone-800 shadow-[-4px_4px_0_0_#78716c]">
               F
             </span>
-            undada en 2015, Cava Casa Vieja ofrece una experiencia única donde
-            las pizzetas artesanales y vinos selectos se combinan en un ambiente
-            cálido y acogedor, creando la experiencia perfecta para relajarse y
-            compartir momentos inolvidables.
+            {t("about.p1")}
           </p>
 
           <div className="line flex items-center gap-4 my-8 clear-left">
@@ -137,10 +136,7 @@ export function AboutUsPage() {
             <span className="float-left mr-3 mt-1 flex items-center justify-center w-10 h-10 bg-taupe-200 text-3xl font-serif font-bold text-stone-800 shadow-[-4px_4px_0_0_#78716c]">
               C
             </span>
-            ava Casa Vieja invita a descubrir una carta pensada al detalle:
-            pizzetas horneadas con masa madre, tablas de quesos y carnes frías,
-            y una selección de vinos y bebidas que van desde etiquetas de la
-            casa hasta clásicos infalibles para cada paladar.
+            {t("about.p2")}
           </p>
         </div>
       </div>

@@ -6,6 +6,7 @@ export function DrinkMenu1Left() {
       <img
         src="/fluent-emoji-high-contrast_wine-glass.svg"
         className="block mx-auto w-8 h-8"
+        alt="Ícono de copa de vino"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         ◇ VINOS AFRUTADOS ◇
@@ -35,6 +36,7 @@ export function DrinkMenu1Left() {
       <img
         src="/pinhead_traditional-storage-jars.svg"
         className="block mx-auto w-8 h-8 mt-4"
+        alt="Ícono de jarritos"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         ◇ JARRITOS ◇

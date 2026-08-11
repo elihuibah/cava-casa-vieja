@@ -4,16 +4,23 @@ import { AboutUsPage } from "./pages/AboutUsPage";
 import { MenuPage } from "./pages/MenuPage";
 import { ReservationsPage } from "./pages/ReservationsPage";
 import { LocationPage } from "./pages/LocationPage";
+import { Footer } from "./components/Footer";
+import { LanguageProvider } from "../context/LanguageContext";
 
 function App() {
   return (
     <>
-      <Header />
-      <HeroPage />
-      <AboutUsPage />
-      <MenuPage />
-      <ReservationsPage />
-      <LocationPage />
+      <LanguageProvider>
+        <Header />
+        <main>
+          <HeroPage />
+          <AboutUsPage />
+          <MenuPage />
+          <ReservationsPage />
+          <LocationPage />
+          <Footer />
+        </main>
+      </LanguageProvider>
     </>
   );
 }

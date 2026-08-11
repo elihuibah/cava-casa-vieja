@@ -1,3 +1,4 @@
+import { useLanguage } from "../context/useLanguage";
 import { RevealEffect } from "../components/RevealEffect";
 import reservationsbackground from "../assets/reservations-background.jpg";
 
@@ -13,6 +14,7 @@ function CornerMarks() {
 }
 
 export function ReservationsPage() {
+  const { t } = useLanguage();
   return (
     <section
       id="reservaciones"
@@ -21,28 +23,29 @@ export function ReservationsPage() {
     >
       <div className="absolute inset-0 bg-stone-50/70" />
       <div className="relative z-10 max-w-5xl mx-auto text-center">
-        <h2 className="font-serif text-5xl font-bold mb-6">RESERVA AHORA</h2>
+        <h2 className="font-serif text-5xl font-bold mb-6">
+          {t("reservations.title")}
+        </h2>
         <div className="w-full h-0.5 bg-stone-900 mb-12" />
 
         <div className="grid md:grid-cols-2 gap-10">
           <RevealEffect delay={0} className="relative bg-stone-200 p-10">
             <CornerMarks />
             <h3 className="font-serif text-center font-bold text-3xl mb-4">
-              HORARIO
+              {t("reservations.schedule")}
             </h3>
             <div className="grid grid-cols-[auto_1fr] gap-6 items-center">
               <div className="flex items-center justify-center">
                 <img
                   src="/healthicons_i-schedule-school-date-time.svg"
                   className="w-24 h-24"
+                  alt="Ícono de calendario"
                 />
               </div>
               <div className="text-left">
                 <p className="text-stone-900 leading-relaxed text-2xl">
-                  Viernes y Sábado: <br /> 05:00 P.M. - 12:00 A.M.
-                </p>
-                <p className="text-stone-900 leading-relaxed text-2xl mt-4">
-                  Domingo a Jueves: <br /> CERRADO
+                  {t("reservations.weekendDays")} <br />
+                  {t("reservations.weekendHours")}
                 </p>
               </div>
             </div>
@@ -51,7 +54,7 @@ export function ReservationsPage() {
           <RevealEffect delay={200} className="relative bg-stone-200 p-10">
             <CornerMarks />
             <h3 className="font-serif font-bold text-3xl text-center mb-4">
-              CONTACTO
+              {t("reservations.contact")}
             </h3>
             <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-5 items-center text-left">
               <a
@@ -60,7 +63,11 @@ export function ReservationsPage() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-70 transition"
               >
-                <img src="/basil_whatsapp-solid.svg" className="w-12 h-12" />
+                <img
+                  src="/basil_whatsapp-solid.svg"
+                  className="w-12 h-12"
+                  alt="Ícono de WhatsApp"
+                />
               </a>
               <a
                 href="https://wa.me/526651137613?text=Hola,%20quisiera%20reservar"
@@ -76,7 +83,11 @@ export function ReservationsPage() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-70 transition"
               >
-                <img src="/mdi_facebook.svg" className="w-12 h-12" />
+                <img
+                  src="/mdi_facebook.svg"
+                  className="w-12 h-12"
+                  alt="Ícono de Facebook"
+                />
               </a>
               <a
                 href="https://m.me/cavacasavieja"
@@ -93,7 +104,11 @@ export function ReservationsPage() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-70 transition"
               >
-                <img src="/formkit_instagram.svg" className="w-12 h-12" />
+                <img
+                  src="/formkit_instagram.svg"
+                  className="w-12 h-12"
+                  alt="Ícono de Instagram"
+                />
               </a>
               <a
                 href="https://ig.me/m/cavacasavieja/"
@@ -110,6 +125,7 @@ export function ReservationsPage() {
                 <img
                   src="/material-symbols-light_mail-sharp.svg"
                   className="w-12 h-12"
+                  alt="Ícono de correo electrónico"
                 />
               </a>
               <a
