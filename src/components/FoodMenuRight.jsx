@@ -1,6 +1,11 @@
+import { useLanguage } from "../context/useLanguage";
+import { foodMenuRight } from "../data/foodMenuRight";
 import { MenuItem } from "./MenuItem";
 
 export function FoodMenuRight() {
+  const { lang } = useLanguage();
+  const d = foodMenuRight[lang];
+
   return (
     <div>
       <img
@@ -9,14 +14,15 @@ export function FoodMenuRight() {
         alt="Ícono de ensalada"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
-        ◇ ENSALADAS ◇
+        {d.ensaladasTitle}
       </h3>
       <h4 className="text-center leading-relaxed italic mb-2 text-stone-600">
-        Variedad de lechugas, queso y frutos secos
+        {d.ensaladasNote}
       </h4>
       <div className="space-y-4">
-        <MenuItem name="Pequeña" price="$160" />
-        <MenuItem name="Familiar" price="$390" />
+        {d.ensaladasItems.map((item, i) => (
+          <MenuItem key={i} name={item.name} price={item.price} />
+        ))}
       </div>
 
       <img
@@ -25,14 +31,15 @@ export function FoodMenuRight() {
         alt="Ícono de queso"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
-        ◇ QUESO FUNDIDO ◇
+        {d.quesoTitle}
       </h3>
       <div className="space-y-4">
-        <MenuItem name="Natural" price="$240" />
-        <MenuItem name="Preparado" price="$255" />
+        {d.quesoItems.map((item, i) => (
+          <MenuItem key={i} name={item.name} price={item.price} />
+        ))}
       </div>
       <p className="italic text-left leading-relaxed text-stone-600">
-        Chorizo, rajas, champiñones. Con tortillas de harina, de maíz o pan.
+        {d.quesoDescription}
       </p>
 
       <img
@@ -41,13 +48,12 @@ export function FoodMenuRight() {
         alt="Ícono de carne"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
-        ◇ TABLAS DE QUESO Y CARNES ◇
+        {d.tablasTitle}
       </h3>
       <div className="space-y-4">
-        <MenuItem name="Quesos (chica)" price="$370" />
-        <MenuItem name="Quesos (grande)" price="$475" />
-        <MenuItem name="Quesos y carnes frías (chica)" price="$495" />
-        <MenuItem name="Quesos y carnes frías (grande)" price="$515" />
+        {d.tablasItems.map((item, i) => (
+          <MenuItem key={i} name={item.name} price={item.price} />
+        ))}
       </div>
     </div>
   );

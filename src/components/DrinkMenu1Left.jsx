@@ -1,6 +1,11 @@
+import { useLanguage } from "../context/useLanguage";
+import { drinkMenu1Left } from "../data/drinkMenu1Left";
 import { MenuItem } from "./MenuItem";
 
 export function DrinkMenu1Left() {
+  const { lang } = useLanguage();
+  const d = drinkMenu1Left[lang];
+
   return (
     <div>
       <img
@@ -9,28 +14,20 @@ export function DrinkMenu1Left() {
         alt="Ícono de copa de vino"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
-        ◇ VINOS AFRUTADOS ◇
+        {d.vinosTitle}
       </h3>
 
-      <div className="grid grid-cols-2 items-start mt-4">
-        <div className="left-column">
-          <MenuItem name="Afrutado" price="$300" priceClassName="mr-4" />
-          <p className="italic text-left leading-relaxed mb-4 text-stone-600">
-            Fructosa → 12%
-          </p>
-          <MenuItem name="70/30" price="$300" priceClassName="mr-4" />
-          <p className="italic text-left mb-4 leading-relaxed text-stone-600">
-            Fructosa → 12%
-          </p>
-          <MenuItem name="Cielo Rojo" price="$300" priceClassName="mr-4" />
-          <p className="italic text-left mb-4 leading-relaxed text-stone-600">
-            Fructosa → 12%
-          </p>
-        </div>
-        <div className="right-column border-l border-stone-400 pl-4 h-48 space-y-4">
-          <MenuItem name="Tintos con Chocolate" price="$350" />
-          <MenuItem name="Copa de Vino Afrutado" price="$110" />
-        </div>
+      <div className="space-y-4">
+        {d.vinosItems.map((item, i) => (
+          <div key={i}>
+            <MenuItem name={item.name} price={item.price} />
+            {item.description && (
+              <p className="italic text-sm text-stone-600">
+                {item.description}
+              </p>
+            )}
+          </div>
+        ))}
       </div>
 
       <img
@@ -39,13 +36,12 @@ export function DrinkMenu1Left() {
         alt="Ícono de jarritos"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
-        ◇ JARRITOS ◇
+        {d.jarritosTitle}
       </h3>
       <div className="space-y-4">
-        <MenuItem name="Tradicional" price="$155" />
-        <MenuItem name="Jumbos" price="$310" />
-        <MenuItem name="Jarrito con Don Julio Sencillo" price="$190" />
-        <MenuItem name="Jarrito con Don Julio Doble" price="$380" />
+        {d.jarritosItems.map((item, i) => (
+          <MenuItem key={i} name={item.name} price={item.price} />
+        ))}
       </div>
     </div>
   );

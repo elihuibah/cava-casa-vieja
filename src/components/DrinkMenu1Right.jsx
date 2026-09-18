@@ -1,6 +1,11 @@
+import { useLanguage } from "../context/useLanguage";
+import { drinkMenu1Right } from "../data/drinkMenu1Right";
 import { MenuItem } from "./MenuItem";
 
 export function DrinkMenu1Right() {
+  const { lang } = useLanguage();
+  const d = drinkMenu1Right[lang];
+
   return (
     <div>
       <img
@@ -9,15 +14,12 @@ export function DrinkMenu1Right() {
         alt="Ícono de botella de vino"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
-        ◇ LÍNEA DE VINO "DON ENRIQUE" ◇
+        {d.donEnriqueTitle}
       </h3>
       <div className="space-y-4 mt-4">
-        <MenuItem name="Nebiolo" price="$540" />
-        <MenuItem name="Petite Sirah" price="$540" />
-        <MenuItem name="Cabernet Saugvinon" price="$540" />
-        <MenuItem name="Cabernet Franc" price="$540" />
-        <MenuItem name="Armonía de Tintos" price="$540" />
-        <MenuItem name="Copa de Vino" price="$140" />
+        {d.donEnriqueItems.map((item, i) => (
+          <MenuItem key={i} name={item.name} price={item.price} />
+        ))}
       </div>
       <img
         src="/solar_wineglass-bold.svg"
@@ -25,12 +27,12 @@ export function DrinkMenu1Right() {
         alt="Ícono de copa de sangría"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
-        ◇ SANGRÍAS ◇
+        {d.sangriasTitle}
       </h3>
       <div className="space-y-4">
-        <MenuItem name="Copa de Sangría" price="$130" />
-        <MenuItem name="Sangría de 1L" price="$200" />
-        <MenuItem name="Sangría de 2L" price="$335" />
+        {d.sangriasItems.map((item, i) => (
+          <MenuItem key={i} name={item.name} price={item.price} />
+        ))}
       </div>
     </div>
   );

@@ -1,6 +1,11 @@
+import { useLanguage } from "../context/useLanguage";
+import { foodMenuLeft } from "../data/foodMenuLeft";
 import { MenuItem } from "./MenuItem";
 
 export function FoodMenuLeft() {
+  const { lang } = useLanguage();
+  const d = foodMenuLeft[lang];
+
   return (
     <div>
       <img
@@ -9,29 +14,13 @@ export function FoodMenuLeft() {
         alt="Ícono de pizza"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
-        ◇ PIZZAS ◇
+        {d.pizzasTitle}
       </h3>
       <h4 className="text-center font-bold mb-2">Cada una a $255</h4>
       <div className="space-y-4">
-        <MenuItem name="Pepperoni" />
-        <MenuItem
-          name="Ranchera"
-          description="Chorizo, tocino, carne deshebrada, cebolla y jalapeño"
-        />
-        <MenuItem
-          name="Suprema"
-          description="Pepperoni, chile morrón, aceituna negra, cebolla y champiñones"
-        />
-        <MenuItem name="Hawaiana" description="Jamón y piña" />
-        <MenuItem name="Margarita" description="Tomate y pesto" />
-        <MenuItem
-          name="Carnes Frías"
-          description="Pepperoni, jamón y salchicha"
-        />
-        <MenuItem
-          name="Combinadas"
-          description="Pepperoni, jamón y salchicha"
-        />
+        {d.pizzasItems.map((item, i) => (
+          <MenuItem key={i} name={item.name} description={item.description} />
+        ))}
       </div>
 
       <img
@@ -40,13 +29,10 @@ export function FoodMenuLeft() {
         alt="Ícono de pan asado"
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
-        ◇ PAN ASADO ◇
+        {d.panTitle}
       </h3>
-      <p className="text-center font-semibold mb-2">$280</p>
-      <p className="text-center leading-relaxed">
-        Pan artesanal humectado en aceite de oliva y<br />
-        especias. Relleno de queso con trozos de tocinos
-      </p>
+      <p className="text-center font-semibold mb-2">{d.panPrice}</p>
+      <p className="text-center leading-relaxed">{d.panDescription}</p>
     </div>
   );
 }
