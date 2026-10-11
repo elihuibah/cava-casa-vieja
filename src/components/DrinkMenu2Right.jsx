@@ -8,7 +8,7 @@ export function DrinkMenu2Right() {
 
   return (
     <div>
-      <img src="/fontisto_cocktail.svg" className="block mx-auto w-8 h-8" alt="" />
+      <img src={`${import.meta.env.BASE_URL}fontisto_cocktail.svg`} className="block mx-auto w-8 h-8" alt="" />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         {d.title}
       </h3>

@@ -9,7 +9,7 @@ export function DrinkMenu1Right() {
   return (
     <div>
       <img
-        src="/game-icons_wine-bottle.svg"
+        src={`${import.meta.env.BASE_URL}game-icons_wine-bottle.svg`}
         className="block mx-auto w-8 h-8"
         alt=""
       />
@@ -22,7 +22,7 @@ export function DrinkMenu1Right() {
         ))}
       </div>
       <img
-        src="/solar_wineglass-bold.svg"
+        src={`${import.meta.env.BASE_URL}solar_wineglass-bold.svg`}
         className="block mx-auto w-8 h-8 mt-4"
         alt=""
       />

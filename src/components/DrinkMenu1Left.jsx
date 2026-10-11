@@ -12,7 +12,7 @@ export function DrinkMenu1Left() {
   return (
     <div>
       <img
-        src="/fluent-emoji-high-contrast_wine-glass.svg"
+        src={`${import.meta.env.BASE_URL}fluent-emoji-high-contrast_wine-glass.svg`}
         className="block mx-auto w-8 h-8"
         alt=""
       />
@@ -43,7 +43,7 @@ export function DrinkMenu1Left() {
       </div>
 
       <img
-        src="/pinhead_traditional-storage-jars.svg"
+        src={`${import.meta.env.BASE_URL}pinhead_traditional-storage-jars.svg`}
         className="block mx-auto w-8 h-8 mt-4"
         alt=""
       />

@@ -76,13 +76,13 @@ export function Header() {
         <div className="mx-auto flex h-full max-w-6xl items-center gap-8 xl:gap-12 px-8 md:px-16">
           <a href="#inicio" className="shrink-0" aria-label={t("header.home")}>
             <img
-              src="./Logo.svg"
+              src={`${import.meta.env.BASE_URL}Logo.svg`}
               alt={t("header.logoAlt")}
               className="h-10 w-auto lg:h-14"
             />
           </a>
           <img
-            src="./line.svg"
+            src={`${import.meta.env.BASE_URL}line.svg`}
             alt=""
             aria-hidden="true"
             className="hidden lg:block h-14"

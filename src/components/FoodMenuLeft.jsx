@@ -9,7 +9,7 @@ export function FoodMenuLeft() {
   return (
     <div>
       <img
-        src="/famicons_pizza-sharp.svg"
+        src={`${import.meta.env.BASE_URL}famicons_pizza-sharp.svg`}
         className="block mx-auto w-8 h-8"
         alt=""
       />
@@ -24,7 +24,7 @@ export function FoodMenuLeft() {
       </div>
 
       <img
-        src="/mdi_bread.svg"
+        src={`${import.meta.env.BASE_URL}mdi_bread.svg`}
         className="block mx-auto w-8 h-8 mt-4"
         alt=""
       />
