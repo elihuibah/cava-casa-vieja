@@ -11,7 +11,7 @@ export function DrinkMenu1Right() {
       <img
         src="/game-icons_wine-bottle.svg"
         className="block mx-auto w-8 h-8"
-        alt="Ícono de botella de vino"
+        alt=""
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         {d.donEnriqueTitle}
@@ -24,7 +24,7 @@ export function DrinkMenu1Right() {
       <img
         src="/solar_wineglass-bold.svg"
         className="block mx-auto w-8 h-8 mt-4"
-        alt="Ícono de copa de sangría"
+        alt=""
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         {d.sangriasTitle}

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
-export function RevealEffect({ children, delay = 0, className = "" }) {
+// Extra props (e.g. aria-hidden for decorative shapes) go to the wrapper div.
+export function RevealEffect({ children, delay = 0, className = "", ...props }) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -21,6 +22,7 @@ export function RevealEffect({ children, delay = 0, className = "" }) {
 
   return (
     <div
+      {...props}
       ref={ref}
       className={`transition-all duration-1000 ease-out ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"

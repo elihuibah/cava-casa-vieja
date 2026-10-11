@@ -1,4 +1,4 @@
-export const foddMenuRight = {
+export const foodMenuRight = {
   es: {
     ensaladasTitle: "◇ ENSALADAS ◇",
     ensaladasNote: "Variedad de lechugas, queso y frutos secos",
@@ -12,8 +12,8 @@ export const foddMenuRight = {
       { name: "Preparado", price: "$255" },
     ],
     quesoDescription:
-      "Chorizo, rajas, champiñones. Acompañado con tortillas de harina, de maíz o pan",
-    tablasTitle: "◇ TABLAS DE QUESO Y CARNES FRÍAS ◇",
+      "Chorizo, rajas, champiñones. Con tortillas de harina, de maíz o pan.",
+    tablasTitle: "◇ TABLAS DE QUESO Y CARNES ◇",
     tablasItems: [
       { name: "Quesos (chica)", price: "$370" },
       { name: "Quesos (grande)", price: "$475" },
@@ -34,8 +34,8 @@ export const foddMenuRight = {
       { name: "Prepared", price: "$255" },
     ],
     quesoDescription:
-      "Chorizo, roasted chili, mushrooms. Served with flour, corn or bread tortillas",
-    tablasTitle: "◇ CHEESE & COLD CUT BOARDS ◇",
+      "Chorizo, roasted peppers, mushrooms. With flour or corn tortillas, or bread.",
+    tablasTitle: "◇ CHEESE & MEAT BOARDS ◇",
     tablasItems: [
       { name: "Cheese (small)", price: "$370" },
       { name: "Cheese (large)", price: "$475" },

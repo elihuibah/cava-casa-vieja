@@ -11,7 +11,7 @@ export function FoodMenuRight() {
       <img
         src="/fluent_bowl-salad-20-filled.svg"
         className="block mx-auto w-8 h-8"
-        alt="Ícono de ensalada"
+        alt=""
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         {d.ensaladasTitle}
@@ -28,7 +28,7 @@ export function FoodMenuRight() {
       <img
         src="/flowbite_cheese-solid.svg"
         className="block mx-auto w-8 h-8 mt-4"
-        alt="Ícono de queso"
+        alt=""
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         {d.quesoTitle}
@@ -45,7 +45,7 @@ export function FoodMenuRight() {
       <img
         src="/meat.svg"
         className="block mx-auto w-8 h-8 mt-4"
-        alt="Ícono de carne"
+        alt=""
       />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
         {d.tablasTitle}
