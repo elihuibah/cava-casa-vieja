@@ -1,8 +1,10 @@
 import { useRef, useState } from "react";
 import { Menu } from "../components/Menu";
+import { useLanguage } from "../context/useLanguage";
 import menubackground from "../assets/menu-background.jpg";
 
 export function MenuPage() {
+  const { t } = useLanguage();
   const bookRef = useRef();
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -16,27 +18,29 @@ export function MenuPage() {
   return (
     <section
       id="menu"
-      className="scroll-mt-24 relative py-12 px-8 bg-cover bg-center"
+      className="relative py-12 px-8 bg-cover bg-center"
       style={{ backgroundImage: `url(${menubackground})` }}
     >
       <div className="absolute inset-0 bg-stone-900/70" />
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         <h2 className="font-serif text-4xl font-bold text-stone-100 mb-3">
-          MENÚ
+          {t("menu.title")}
         </h2>
         <div className="flex items-center justify-center gap-6 mb-8">
           <button
             onClick={() => goToPage(0)}
+            aria-pressed={isFoodMenuActive}
             className={`cursor-pointer font-serif text-xl font-semibold text-stone-50 hover:text-stone-300 transition ${isFoodMenuActive ? "text-stone-50 underline underline-offset-4" : "text-stone-400"}`}
           >
-            Comida
+            {t("menu.food")}
           </button>
-          <div className="w-px h-6 bg-stone-50/50" />
+          <div aria-hidden="true" className="w-px h-6 bg-stone-50/50" />
           <button
             onClick={() => goToPage(2)}
+            aria-pressed={isDrinksMenuActive}
             className={`cursor-pointer font-serif text-xl font-semibold text-stone-50 hover:text-stone-300 transition ${isDrinksMenuActive ? "text-stone-50 underline underline-offset-4" : "text-stone-400"}`}
           >
-            Bebidas
+            {t("menu.drinks")}
           </button>
         </div>
         <Menu bookRef={bookRef} onPageChange={setCurrentPage} />

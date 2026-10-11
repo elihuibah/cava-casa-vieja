@@ -1,15 +1,25 @@
 @import "tailwindcss";
 
+/* Height of the sticky header; also used to offset anchor jumps. */
+:root {
+  --header-h: 5rem;
+}
+
+@media (width >= 64rem) {
+  :root {
+    --header-h: 6rem;
+  }
+}
+
 body {
   font-family: "Crimson Text", sans-serif;
+  /* `clip` instead of `hidden`: hidden would turn <body> into its own scroll
+     container (a second scrollbar) and break the sticky header. */
+  overflow-x: clip;
 }
 
 html {
   -ms-overflow-style: none;
   scroll-behavior: smooth;
-}
-
-html,
-body {
-  overflow-x: hidden;
+  scroll-padding-top: var(--header-h);
 }

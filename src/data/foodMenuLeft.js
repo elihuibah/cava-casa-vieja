@@ -21,7 +21,7 @@ export const foodMenuLeft = {
     panTitle: "◇ PAN ASADO ◇",
     panPrice: "$280",
     panDescription:
-      "Pan artesanal humectado en aceite de oliva y especias. Relleno de queso con trozos de tocinos",
+      "Pan artesanal humectado en aceite de oliva y\nespecias. Relleno de queso con trozos de tocinos",
   },
   en: {
     pizzasTitle: "◇ PIZZAS ◇",
@@ -44,6 +44,6 @@ export const foodMenuLeft = {
     panTitle: "◇ TOASTED BREAD ◇",
     panPrice: "$280",
     panDescription:
-      "Artisanal bread moistened with olive oil and spices. Filled with cheese and bacon bits",
+      "Artisanal bread moistened with olive oil and\nspices. Filled with cheese and bacon bits",
   },
 };

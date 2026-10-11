@@ -1,27 +1,21 @@
+import { useLanguage } from "../context/useLanguage";
+import { drinkMenu2Right } from "../data/drinkMenu2Right";
 import { MenuItem } from "./MenuItem";
 
 export function DrinkMenu2Right() {
+  const { lang } = useLanguage();
+  const d = drinkMenu2Right[lang];
+
   return (
     <div>
-      <img
-        src="/fontisto_cocktail.svg"
-        className="block mx-auto w-8 h-8"
-        alt="Ícono de coctel"
-      />
+      <img src="/fontisto_cocktail.svg" className="block mx-auto w-8 h-8" alt="" />
       <h3 className="text-center font-serif text-xl font-bold tracking-wide">
-        ◇ COCTELERÍA ◇
+        {d.title}
       </h3>
       <div className="space-y-5">
-        <MenuItem name="Mojito" price="$150" />
-        <MenuItem name="Mojito con Mezcal" price="$190" />
-        <MenuItem name="Mezcal Preparado" price="$190" />
-        <MenuItem name="Piña Colada" price="$155" />
-        <MenuItem name="Piña Colada con Licor" price="$175" />
-        <MenuItem name="Paloma" price="$150" />
-        <MenuItem name="Tom Collins" price="$170" />
-        <MenuItem name="Margarita" price="$180" />
-        <MenuItem name="Martinni" price="$195" />
-        <MenuItem name="Carajillo" price="$170" />
+        {d.items.map((item, i) => (
+          <MenuItem key={i} name={item.name} price={item.price} />
+        ))}
       </div>
     </div>
   );
