@@ -1,7 +1,7 @@
 export const translations = {
   es: {
     seo: {
-      title: "Cava Casa Vieja | Vinos y pizzetas artesanales en Tecate, B.C.",
+      title: "Cava Casa Vieja",
       description:
         "Cava de vinos en Tecate, Baja California: pizzetas artesanales con masa madre, tablas de quesos y vinos selectos en un ambiente cálido. Abierto viernes y sábado. Reserva ahora.",
     },
@@ -57,7 +57,8 @@ export const translations = {
       weekendHours: "05:00\u00A0P.M. - 12:00\u00A0A.M.",
       weekdaysDays: "Domingo a Jueves:",
       weekdaysHours: "CERRADO",
-      whatsappMessage: "Hola, quisiera reservar",
+      whatsappMessage:
+        "Hola, quisiera hacer una reservación en Cava Casa Vieja.",
       emailAlt: "Correo electrónico",
     },
     location: {
@@ -67,14 +68,14 @@ export const translations = {
       mapTitle: "Ubicación de Cava Casa Vieja",
     },
     footer: {
-      rights: "Cava Casa Vieja. Todos los derechos reservados. © ",
+      rights: "Cava Casa Vieja. Todos los derechos reservados. ©",
       disclaimer:
         "Las imágenes son usadas por motivos de ilustración solamente. La venta de bebidas alcohólicas a personas menores de 18 años de edad está estrictamente prohibida. Disfrute con moderación. Si bebe, no conduzca.",
     },
   },
   en: {
     seo: {
-      title: "Cava Casa Vieja | Wine and artisanal pizzettas in Tecate, B.C.",
+      title: "Cava Casa Vieja",
       description:
         "Wine bar in Tecate, Baja California: sourdough artisanal pizzettas, cheese boards and select wines in a warm atmosphere. Open Friday and Saturday. Reserve now.",
     },
@@ -137,7 +138,7 @@ export const translations = {
       mapTitle: "Cava Casa Vieja location",
     },
     footer: {
-      rights: "Cava Casa Vieja. All rights reserved. © 2026.",
+      rights: "Cava Casa Vieja. All rights reserved. ©",
       disclaimer:
         "Images are used for illustrative purposes only. The sale of alcoholic beverages to persons under 18 years of age is strictly prohibited. Enjoy responsibly. Don't drink and drive.",
     },
