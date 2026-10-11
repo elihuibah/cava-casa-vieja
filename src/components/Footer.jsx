@@ -14,14 +14,14 @@ export function Footer() {
         >
           <div className="flex-1 h-px bg-stone-100" />
           <Icon
-            src="/boxicons_wine-filled.svg"
+            src={`${import.meta.env.BASE_URL}boxicons_wine-filled.svg`}
             colorClass="bg-stone-100"
             className="block w-7.5 h-7.5"
           />
           <div className="flex-1 h-px bg-stone-100" />
         </div>
         <img
-          src="./Logo.svg"
+          src={`${import.meta.env.BASE_URL}Logo.svg`}
           alt={t("header.logoAlt")}
           className="mx-auto mt-8 h-12 w-auto"
         />

@@ -39,7 +39,7 @@ export function ReservationsPage() {
             <div className="grid grid-cols-[auto_1fr] gap-6 items-center">
               <div className="flex items-center justify-center">
                 <img
-                  src="/healthicons_i-schedule-school-date-time.svg"
+                  src={`${import.meta.env.BASE_URL}healthicons_i-schedule-school-date-time.svg`}
                   className="w-16 h-16 md:w-24 md:h-24"
                   alt=""
                 />
@@ -72,7 +72,7 @@ export function ReservationsPage() {
                 className="flex items-center gap-4 hover:opacity-70 transition"
               >
                 <img
-                  src="/basil_whatsapp-solid.svg"
+                  src={`${import.meta.env.BASE_URL}basil_whatsapp-solid.svg`}
                   className="w-10 h-10 md:w-12 md:h-12"
                   alt=""
                 />
@@ -95,7 +95,7 @@ export function ReservationsPage() {
                 className="flex items-center gap-4 hover:opacity-70 transition"
               >
                 <img
-                  src="/mdi_facebook.svg"
+                  src={`${import.meta.env.BASE_URL}mdi_facebook.svg`}
                   className="w-10 h-10 md:w-12 md:h-12"
                   alt=""
                 />
@@ -119,7 +119,7 @@ export function ReservationsPage() {
                 className="flex items-center gap-4 hover:opacity-70 transition"
               >
                 <img
-                  src="/formkit_instagram.svg"
+                  src={`${import.meta.env.BASE_URL}formkit_instagram.svg`}
                   className="w-10 h-10 md:w-12 md:h-12"
                   alt=""
                 />
@@ -140,7 +140,7 @@ export function ReservationsPage() {
                 className="flex items-center gap-4 hover:opacity-70 transition"
               >
                 <img
-                  src="/material-symbols-light_mail-sharp.svg"
+                  src={`${import.meta.env.BASE_URL}material-symbols-light_mail-sharp.svg`}
                   className="w-10 h-10 md:w-12 md:h-12"
                   alt=""
                 />

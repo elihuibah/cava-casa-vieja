@@ -9,7 +9,7 @@ export function FoodMenuRight() {
   return (
     <div>
       <img
-        src="/fluent_bowl-salad-20-filled.svg"
+        src={`${import.meta.env.BASE_URL}fluent_bowl-salad-20-filled.svg`}
         className="block mx-auto w-8 h-8"
         alt=""
       />
@@ -26,7 +26,7 @@ export function FoodMenuRight() {
       </div>
 
       <img
-        src="/flowbite_cheese-solid.svg"
+        src={`${import.meta.env.BASE_URL}flowbite_cheese-solid.svg`}
         className="block mx-auto w-8 h-8 mt-4"
         alt=""
       />
@@ -43,7 +43,7 @@ export function FoodMenuRight() {
       </p>
 
       <img
-        src="/meat.svg"
+        src={`${import.meta.env.BASE_URL}meat.svg`}
         className="block mx-auto w-8 h-8 mt-4"
         alt=""
       />

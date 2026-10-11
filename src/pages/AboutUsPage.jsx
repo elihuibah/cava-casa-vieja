@@ -16,7 +16,7 @@ export function AboutUsPage() {
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-no-repeat bg-top-right opacity-10 pointer-events-none"
-        style={{ backgroundImage: "url('/origenes-laus.png')" }}
+        style={{ backgroundImage: `url('${import.meta.env.BASE_URL}origenes-laus.png')` }}
       />
 
       {/* Two columns only from lg: on tablets the title and the collage were
@@ -42,7 +42,7 @@ export function AboutUsPage() {
             className="absolute top-14 left-0 w-3/5 aspect-4/5 z-20"
           >
             <img
-              src="/DSC01279.JPG"
+              src={`${import.meta.env.BASE_URL}DSC01279.JPG`}
               alt={t("about.signAlt")}
               className="w-full h-full object-cover shadow-xl/25"
             />
@@ -53,7 +53,7 @@ export function AboutUsPage() {
             className="absolute -bottom-14 right-0 w-3/5 aspect-4/5 z-30"
           >
             <img
-              src="/475122804_2687146191495051_646480903382055388_n.jpg"
+              src={`${import.meta.env.BASE_URL}475122804_2687146191495051_646480903382055388_n.jpg`}
               alt={t("about.wineAlt")}
               className="w-full h-full object-cover shadow-xl/25"
             />
@@ -144,7 +144,7 @@ export function AboutUsPage() {
             className="line flex items-center gap-4 my-8 clear-left"
           >
             <div className="flex-1 h-px bg-stone-400" />
-            <img src="/boxicons_wine-filled.svg" alt="" />
+            <img src={`${import.meta.env.BASE_URL}boxicons_wine-filled.svg`} alt="" />
             <div className="flex-1 h-px bg-stone-400" />
           </div>
 
