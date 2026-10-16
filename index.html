@@ -69,11 +69,29 @@
     </script>
 
     <link rel="icon" type="image/svg+xml" href="/Logo.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="canonical" href="https://cavacasavieja.com/" />
+
+    <!-- Start downloading what the hero needs in parallel with the JS bundle;
+         otherwise nothing is requested until React renders it. -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/node_modules/@fontsource/crimson-text/files/crimson-text-latin-700-italic.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/src/assets/hero1.webp"
+      fetchpriority="high"
+    />
+    <!-- The bottle is hidden below md, so phones skip it. -->
+    <link
+      rel="preload"
+      as="image"
+      href="/src/assets/wine-bottle.webp"
+      media="(min-width: 768px)"
     />
   </head>
   <body>
