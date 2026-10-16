@@ -69,14 +69,32 @@
     </script>
 
     <link rel="icon" type="image/svg+xml" href="/Logo.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="canonical" href="https://cavacasavieja.com/" />
+
+    <!-- Start downloading what the hero needs in parallel with the JS bundle;
+         otherwise nothing is requested until React renders it. -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/assets/crimson-text-latin-700-italic-DiZLe51a.woff2"
+      crossorigin
     />
-    <script type="module" crossorigin src="/assets/index-Di_nawAq.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-2G_UeCgO.css">
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/hero1-D_GEx54R.webp"
+      fetchpriority="high"
+    />
+    <!-- The bottle is hidden below md, so phones skip it. -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/wine-bottle-Cy6ow7q_.webp"
+      media="(min-width: 768px)"
+    />
+    <script type="module" crossorigin src="/assets/index-BJ82J-1s.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DQyiGwH0.css">
   </head>
   <body>
     <noscript>
