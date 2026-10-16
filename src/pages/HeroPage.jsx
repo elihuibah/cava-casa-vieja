@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { RevealEffect } from "../components/RevealEffect";
 import { useLanguage } from "../context/useLanguage";
-import hero1 from "../assets/hero1.jpg";
-import hero2 from "../assets/hero2.jpg";
-import hero3 from "../assets/hero3.jpeg";
-import hero4 from "../assets/hero4.jpg";
-import wine from "../assets/wine-bottle.png";
+import hero1 from "../assets/hero1.webp";
+import hero2 from "../assets/hero2.webp";
+import hero3 from "../assets/hero3.webp";
+import hero4 from "../assets/hero4.webp";
+import wine from "../assets/wine-bottle.webp";
 
 const heroImages = [hero1, hero2, hero3, hero4];
 
@@ -52,6 +52,10 @@ export function HeroPage() {
             key={index}
             src={src}
             alt=""
+            width={1920}
+            height={1080}
+            // The first slide is visible right away; the rest have 6s to arrive.
+            fetchPriority={index === 0 ? "high" : "low"}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${imageLayer(index)}`}
           />
         ))}
@@ -87,6 +91,9 @@ export function HeroPage() {
             <img
               src={wine}
               alt={t("hero.imageAlt")}
+              width={254}
+              height={441}
+              fetchPriority="high"
               className="h-[min(68vh,38rem)] max-w-full object-contain object-bottom"
             />
           </RevealEffect>
